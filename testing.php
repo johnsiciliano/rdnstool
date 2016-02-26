@@ -19,7 +19,7 @@ function doRDNS($IPADDRESS,$RDNSNAME) {
 	echo $arr2[3];
 	$LAST3=$arr2[3];
 
-	$query = "https://web.terafire.net:2087/json-api/addzonerecord?zone=$finalip&name=$LAST3&ptrdname=$RDNSNAME&type=PTR";
+	$query = "https://WHMHOST:2087/json-api/addzonerecord?zone=$finalip&name=$LAST3&ptrdname=$RDNSNAME&type=PTR";
 	$curl = curl_init();
 # Create Curl Object
 curl_setopt($curl, CURLOPT_SSL_VERIFYHOST,0);
